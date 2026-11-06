@@ -413,7 +413,7 @@
           </div>
           <h2 class="section-title">Danh Sách <span>Món Ngon Đồi Chill</span></h2>
           <p class="section-desc">
-            Thưởng thức hương vị nguyên bản giữa rừng cây Phước Long. Mỗi món đều được trang trí và phục vụ cùng các đạo cụ dã ngoại như <strong>ca inox giữ nhiệt</strong>, <strong>khay nhôm kiểu camping</strong> và muỗng nĩa phượt.
+            Thưởng thức hương vị nguyên bản giữa rừng cây Phước Long. Cà phê đậm chất trong <strong>Ly trắng nắp đen</strong>, các món nước mát lạnh trong <strong>Ly cao nắp vòm view đồi</strong>, cùng các món nóng sốt thơm lừng trong <strong>Tô dã ngoại nghệ thuật</strong> bắt mắt.
           </p>
           <div class="rugged-divider" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -426,16 +426,22 @@
         <div class="menu-controls">
           <div class="filter-tabs" role="tablist" aria-label="Bộ lọc thực đơn">
             <button type="button" class="filter-btn active" data-filter="all">Tất Cả (15 Món)</button>
-            <button type="button" class="filter-btn" data-filter="noel">🎄 Noel Special (5 Món)</button>
-            <button type="button" class="filter-btn" data-filter="drink">Đồ Uống Ca Inox (10)</button>
-            <button type="button" class="filter-btn" data-filter="food">Món Nóng Khay Nhôm (5)</button>
+            <button type="button" class="filter-btn" data-filter="noel">🎄 Noel Special (5)</button>
+            <button type="button" class="filter-btn" data-filter="coffee">☕ Cà Phê (Ly Trắng)</button>
+            <button type="button" class="filter-btn" data-filter="drink">🧋 Nước Uống (Ly Cao)</button>
+            <button type="button" class="filter-btn" data-filter="food">🍜 Món Ăn (Tô Nghệ Thuật)</button>
           </div>
-          <div class="props-legend">
-            <span class="prop-badge-info">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
-              </svg>
-              Đạo cụ: Ca inox &amp; Khay nhôm kiểu camping
+          <div class="props-legend-grid">
+            <span class="prop-badge-pill coffee" title="Cà phê phục vụ trong ly giấy trắng nắp đen Đồi Chill">
+              <img src="ly-cafe-doi-chill.jpg" alt="Ly trắng nắp đen Đồi Chill" />
+              ☕ Cà phê: Ly trắng nắp đen
+            </span>
+            <span class="prop-badge-pill tall-cup" title="Các món nước khác phục vụ trong ly cao nắp vòm trong suốt view đồi">
+              <img src="ly-cao-doi-chill.jpg" alt="Ly cao Đồi Chill" />
+              🧋 Nước uống: Ly cao view đồi
+            </span>
+            <span class="prop-badge-pill art-bowl" title="Món ăn dã ngoại phục vụ trong tô thiết kế nghệ thuật bắt mắt">
+              🍜 Món ăn: Tô dã ngoại nghệ thuật
             </span>
           </div>
         </div>
@@ -445,15 +451,16 @@
           <!-- NOEL SPECIAL 1: Cacao Nóng Noel Marshmallow -->
           <article class="menu-card" data-category="drink" data-noel="true" data-name="Cacao Nóng Noel Marshmallow" data-price="45k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80"
-                alt="Cacao Nóng Noel Marshmallow ca inox khò lửa bốc khói"
+                alt="Cacao Nóng Noel Marshmallow ly cao Đồi Chill"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">45k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox giữ nhiệt &amp; Kẹo khò lửa
+                Ly cao Đồi Chill • Kẹo khò lửa
               </span>
             </div>
             <div class="menu-body">
@@ -463,7 +470,7 @@
               </div>
               <h3 class="menu-item-title">Cacao Nóng Noel Marshmallow</h3>
               <p class="menu-item-desc">
-                Cacao nguyên chất nóng bốc khói trong ca inox, phủ kẹo dẻo marshmallow khò vàng mặt béo ngậy và rắc bột quế tuyết thơm lừng.
+                Cacao nguyên chất bốc khói đựng trong <strong>ly cao Đồi Chill</strong>, phủ kẹo dẻo marshmallow khò vàng mặt béo ngậy và rắc bột quế tuyết thơm lừng.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 45.000đ (45k)</span>
@@ -475,15 +482,16 @@
           <!-- NOEL SPECIAL 2: Rượu Vang Nấu Đồi Gió -->
           <article class="menu-card" data-category="drink" data-noel="true" data-name="Rượu Vang Nấu Đồi Gió" data-price="65k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80"
-                alt="Rượu Vang Nấu Đồi Gió quế hồi cam vàng phong cách cắm trại"
+                alt="Rượu Vang Nấu Đồi Gió ly cao nắp vòm phong cách lễ hội"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">65k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox &amp; Gia vị thảo mộc
+                Ly cao Đồi Chill • Vang ấm quế hồi
               </span>
             </div>
             <div class="menu-body">
@@ -493,7 +501,7 @@
               </div>
               <h3 class="menu-item-title">Rượu Vang Nấu Đồi Gió</h3>
               <p class="menu-item-desc">
-                Vang ấm Glühwein nấu cùng vỏ cam vàng, thanh quế, hoa hồi và mật ong hoa rừng theo phong cách cắm trại châu Âu, xua tan cái lạnh đêm đồi.
+                Vang ấm Glühwein nấu cùng vỏ cam vàng, thanh quế, hoa hồi trong <strong>ly cao Đồi Chill</strong> chuẩn phong cách cắm trại châu Âu ấm nồng.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 65.000đ (65k)</span>
@@ -505,15 +513,16 @@
           <!-- NOEL SPECIAL 3: Trà Táo Quế Mật Ong Rừng -->
           <article class="menu-card" data-category="drink" data-noel="true" data-name="Trà Táo Quế Mật Ong Rừng" data-price="45k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
-                alt="Trà Táo Quế Mật Ong Rừng bốc khói ca inox"
+                alt="Trà Táo Quế Mật Ong Rừng ly cao"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">45k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox quân đội &amp; Thanh quế
+                Ly cao Đồi Chill • Trà táo quế
               </span>
             </div>
             <div class="menu-body">
@@ -523,7 +532,7 @@
               </div>
               <h3 class="menu-item-title">Trà Táo Quế Mật Ong Rừng</h3>
               <p class="menu-item-desc">
-                Trà đen ủ cùng lát táo đỏ tươi, thanh quế nướng thơm nồng và mật ong rừng nguyên chất, phục vụ trong ca inox quân đội giữ nhiệt ấm áp.
+                Trà đen ủ cùng lát táo đỏ tươi, thanh quế nướng thơm nồng và mật ong rừng nguyên chất, phục vụ trong <strong>ly cao Đồi Chill</strong> xua tan sương lạnh.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 45.000đ (45k)</span>
@@ -535,15 +544,16 @@
           <!-- NOEL SPECIAL 4: Gà Nướng Tiêu Rừng Giáng Sinh -->
           <article class="menu-card" data-category="food" data-noel="true" data-name="Gà Nướng Tiêu Rừng Giáng Sinh" data-price="180k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-bowl">🍜 Tô Dã Ngoại Nghệ Thuật</span>
               <img
                 src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"
-                alt="Gà Nướng Tiêu Rừng Giáng Sinh trên khay nhôm than hồng"
+                alt="Gà Nướng Tiêu Rừng Giáng Sinh bày trí trong tô dã ngoại nghệ thuật"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">180k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag bowl-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm dã ngoại &amp; Muối ớt rừng
+                Tô gốm dã ngoại nghệ thuật
               </span>
             </div>
             <div class="menu-body">
@@ -553,7 +563,7 @@
               </div>
               <h3 class="menu-item-title">Gà Nướng Tiêu Rừng Noel</h3>
               <p class="menu-item-desc">
-                Nửa con gà ta thả đồi ướp hạt dổi, mắc khén và tiêu rừng Phước Long nướng than hồng da giòn rụm, bưng trên khay nhôm camping thơm nức mũi.
+                Nửa con gà ta thả đồi ướp hạt dổi, mắc khén và tiêu rừng Phước Long nướng than hồng da giòn rụm, chặt miếng bày trí nghệ thuật trong <strong>Tô dã ngoại nghệ thuật</strong> kèm muối ớt rừng.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 180.000đ (180k)</span>
@@ -565,15 +575,16 @@
           <!-- NOEL SPECIAL 5: Bắp & Khoai Nướng Bơ Giáng Sinh -->
           <article class="menu-card" data-category="food" data-noel="true" data-name="Bắp & Khoai Nướng Bơ Giáng Sinh" data-price="40k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-bowl">🍜 Tô Dã Ngoại Nghệ Thuật</span>
               <img
                 src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
-                alt="Bắp và khoai lang mật nướng bơ than củi mùa đông"
+                alt="Bắp và khoai lang mật nướng bơ trong tô dã ngoại nghệ thuật"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">40k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag bowl-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm &amp; Than củi đồi
+                Tô mộc camping nghệ thuật
               </span>
             </div>
             <div class="menu-body">
@@ -583,7 +594,7 @@
               </div>
               <h3 class="menu-item-title">Bắp &amp; Khoai Nướng Bơ Noel</h3>
               <p class="menu-item-desc">
-                Bắp ngọt nướng mỡ hành bơ thơm lừng cùng củ khoai mật nướng vùi tro than củi dẻo quánh ngọt lịm, dọn trên khay nhôm kiểu camping.
+                Bắp ngọt nướng mỡ hành bơ thơm lừng cùng củ khoai mật nướng vùi tro than củi dẻo quánh ngọt lịm, dọn trong <strong>Tô dã ngoại nghệ thuật</strong> lót giấy nến mộc mạc.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 40.000đ (40k)</span>
@@ -593,17 +604,18 @@
           </article>
 
           <!-- 1. Cà phê ngọt ngào -->
-          <article class="menu-card" data-category="drink" data-name="Cà phê ngọt ngào" data-price="35k">
+          <article class="menu-card" data-category="coffee" data-name="Cà phê ngọt ngào" data-price="35k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-coffee"><img src="ly-cafe-doi-chill.jpg" class="menu-cup-avatar" alt="Ly trắng nắp đen" /> Ly trắng nắp đen</span>
               <img
-                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
-                alt="Cà phê ngọt ngào phục vụ trong ca inox camping"
+                src="ly-cafe-doi-chill.jpg"
+                alt="Cà phê ngọt ngào phục vụ trong ly trắng nắp đen Đồi Chill"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">35k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag coffee-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox &amp; Khay nhôm camping
+                Ly trắng nắp đen Đồi Chill
               </span>
             </div>
             <div class="menu-body">
@@ -613,7 +625,7 @@
               </div>
               <h3 class="menu-item-title">Cà phê ngọt ngào</h3>
               <p class="menu-item-desc">
-                Cà phê sữa kem béo dịu dành cho buổi sớm săn mây, đựng trong ca inox giữ nhiệt kèm khay nhôm kiểu camping mộc mạc.
+                Cà phê sữa kem béo dịu thơm lừng cho buổi sớm săn mây, đựng trong <strong>ly giấy trắng nắp đen</strong> thương hiệu Đồi Chill chuẩn gu dã ngoại.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 35.000đ (35k)</span>
@@ -623,17 +635,18 @@
           </article>
 
           <!-- 2. Cà phê trưởng thành -->
-          <article class="menu-card" data-category="drink" data-name="Cà phê trưởng thành" data-price="30k">
+          <article class="menu-card" data-category="coffee" data-name="Cà phê trưởng thành" data-price="30k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-coffee"><img src="ly-cafe-doi-chill.jpg" class="menu-cup-avatar" alt="Ly trắng nắp đen" /> Ly trắng nắp đen</span>
               <img
                 src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-                alt="Cà phê trưởng thành pha phin nhôm đựng ca inox đen nhám"
+                alt="Cà phê trưởng thành pha phin đựng ly trắng nắp đen Đồi Chill"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">30k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag coffee-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox đen nhám &amp; Phin nhôm
+                Ly trắng nắp đen Đồi Chill
               </span>
             </div>
             <div class="menu-body">
@@ -643,7 +656,7 @@
               </div>
               <h3 class="menu-item-title">Cà phê trưởng thành</h3>
               <p class="menu-item-desc">
-                Hạt Robusta Bình Phước rang mộc nguyên chất, đắng sâu không đường hoặc ít đá, phục vụ trong ca inox quân đội cực ngầu.
+                Hạt Robusta Bình Phước rang mộc nguyên chất, đắng sâu đậm đà, phục vụ trong <strong>ly trắng nắp đen</strong> giữ trọn hương vị cà phê núi rừng.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 30.000đ (30k)</span>
@@ -655,15 +668,16 @@
           <!-- 3. Sữa chua dalat -->
           <article class="menu-card" data-category="drink" data-name="Sữa chua dalat" data-price="40k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"
-                alt="Sữa chua dalat đặt trên khay nhôm kiểu camping"
+                alt="Sữa chua dalat đựng ly cao nắp vòm trong suốt"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">40k</span>
-              <span class="menu-prop-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm kiểu camping
+              <span class="menu-prop-tag tall-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+                Ly cao nắp vòm view đồi
               </span>
             </div>
             <div class="menu-body">
@@ -673,7 +687,7 @@
               </div>
               <h3 class="menu-item-title">Sữa chua dalat</h3>
               <p class="menu-item-desc">
-                Sữa chua lên men dẻo mịn chuẩn vị Đà Lạt phủ sốt dâu tằm rừng, bày trên khay nhôm kiểu camping kèm muỗng inox nhỏ.
+                Sữa chua lên men dẻo mịn chuẩn vị Đà Lạt phủ sốt dâu tằm rừng, bày trí trong <strong>ly cao nắp vòm trong suốt</strong> ngắm trọn tầng sốt tuyệt đẹp.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 40.000đ (40k)</span>
@@ -685,15 +699,16 @@
           <!-- 4. Sữa chua bầu trời -->
           <article class="menu-card" data-category="drink" data-name="Sữa chua bầu trời" data-price="45k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
-                alt="Sữa chua bầu trời decor ca inox viền bạc"
+                alt="Sữa chua bầu trời decor ly cao nắp vòm"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">45k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox bạc &amp; Khay nhôm
+                Ly cao nắp vòm view đồi
               </span>
             </div>
             <div class="menu-body">
@@ -703,7 +718,7 @@
               </div>
               <h3 class="menu-item-title">Sữa chua bầu trời</h3>
               <p class="menu-item-desc">
-                Sự kết hợp độc đáo giữa sắc xanh hoa đậu biếc và tầng mây sữa chua trắng muốt, lên hình check-in bên ghế xếp cực bắt mắt.
+                Sự kết hợp giữa sắc xanh hoa đậu biếc và mây sữa chua trong <strong>ly cao nắp vòm trong suốt</strong>, lên hình check-in view đồi núi cực bắt mắt.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 45.000đ (45k)</span>
@@ -715,15 +730,16 @@
           <!-- 5. Matcha latte -->
           <article class="menu-card" data-category="drink" data-name="matcha latte" data-price="45k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80"
-                alt="Matcha latte đựng ca inox xanh rêu camping"
+                alt="Matcha latte đựng ly cao Đồi Chill view đồi"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">45k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox xanh rêu Khaki
+                Ly cao Đồi Chill view đồi
               </span>
             </div>
             <div class="menu-body">
@@ -733,7 +749,7 @@
               </div>
               <h3 class="menu-item-title">matcha latte</h3>
               <p class="menu-item-desc">
-                Bột trà xanh matcha Nhật Bản đánh bọt thủ công quyện sữa tươi thanh mát, đồng điệu cùng sắc xanh rêu của núi đồi.
+                Bột trà xanh matcha Nhật Bản thơm ngậy quyện sữa tươi thanh mát, phục vụ trong <strong>ly cao Đồi Chill</strong> mát lạnh sảng khoái.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 45.000đ (45k)</span>
@@ -745,15 +761,16 @@
           <!-- 6. Cacao bóng tối -->
           <article class="menu-card" data-category="drink" data-name="cacao bóng tối" data-price="45k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80"
-                alt="Cacao bóng tối nóng hổi trong ca inox giữ nhiệt"
+                alt="Cacao bóng tối đựng ly cao Đồi Chill"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">45k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-                Ca inox giữ nhiệt 2 lớp
+                Ly cao Đồi Chill
               </span>
             </div>
             <div class="menu-body">
@@ -763,7 +780,7 @@
               </div>
               <h3 class="menu-item-title">cacao bóng tối</h3>
               <p class="menu-item-desc">
-                Cacao nguyên chất sánh đặc, đắng nhẹ hậu ngọt, rắc thêm marshmallow nướng xém trên lửa trại — giữ ấm tuyệt vời khi sương xuống.
+                Cacao nguyên chất sánh đặc, đắng nhẹ hậu ngọt, phục vụ trong <strong>ly cao Đồi Chill</strong> rắc thêm marshmallow nướng xém — giữ ấm tuyệt vời khi sương xuống.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 45.000đ (45k)</span>
@@ -775,15 +792,16 @@
           <!-- 7. Sữa sa mạc -->
           <article class="menu-card" data-category="drink" data-name="sữa sa mạc" data-price="40k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-tall"><img src="ly-cao-doi-chill.jpg" class="menu-cup-avatar" alt="Ly cao Đồi Chill" /> Ly cao Đồi Chill</span>
               <img
                 src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
-                alt="Sữa sa mạc màu vàng cát đặt trên khay nhôm camping"
+                alt="Sữa sa mạc màu vàng cát đựng ly cao nắp vòm"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">40k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag tall-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm &amp; Ca inox vàng cát
+                Ly cao nắp vòm view đồi
               </span>
             </div>
             <div class="menu-body">
@@ -793,7 +811,7 @@
               </div>
               <h3 class="menu-item-title">sữa sa mạc</h3>
               <p class="menu-item-desc">
-                Sữa tươi kem trứng nướng caramel cháy cạnh kết hợp vụn bánh quy bơ màu vàng cát, đặt trên khay nhôm kiểu camping độc lạ.
+                Sữa tươi kem trứng nướng caramel cháy cạnh kết hợp vụn bánh quy bơ màu vàng cát trong <strong>ly cao nắp vòm</strong>, ngắm cảnh đồi núi cực chill.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 40.000đ (40k)</span>
@@ -805,15 +823,16 @@
           <!-- 8. Mỳ lửa Hàn Quốc -->
           <article class="menu-card" data-category="food" data-name="Mỳ lửa Hàn Quốc" data-price="55k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-bowl">🍜 Tô Dã Ngoại Nghệ Thuật</span>
               <img
                 src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80"
-                alt="Mỳ lửa Hàn Quốc nấu trong nồi khay nhôm camping"
+                alt="Mỳ lửa Hàn Quốc trong tô sứ men đen nghệ thuật"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">55k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag bowl-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Nồi &amp; Khay nhôm camping
+                Tô sứ men đen nghệ thuật
               </span>
             </div>
             <div class="menu-body">
@@ -823,7 +842,7 @@
               </div>
               <h3 class="menu-item-title">Mỳ lửa Hàn Quốc</h3>
               <p class="menu-item-desc">
-                Mỳ cay nồng bốc khói nghi ngút cùng xúc xích, kim chi, nấm kim châm và trứng lòng đào, bưng nguyên khay nhôm kiểu camping.
+                Mỳ cay nồng bốc khói nghi ngút cùng xúc xích, kim chi, nấm kim châm và trứng lòng đào, bưng trong <strong>Tô sứ men đen nghệ thuật</strong> giữ nóng ấm.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 55.000đ (55k)</span>
@@ -835,15 +854,16 @@
           <!-- 9. Phá lấu bò viên -->
           <article class="menu-card" data-category="food" data-name="Phá lấu bò viên" data-price="60k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-bowl">🍜 Tô Dã Ngoại Nghệ Thuật</span>
               <img
                 src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
-                alt="Phá lấu bò viên nóng hổi trên khay nhôm kiểu camping"
+                alt="Phá lấu bò viên nóng hổi trong tô gốm sâu lòng nghệ thuật"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">60k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag bowl-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm sâu lòng &amp; Chén inox
+                Tô gốm sâu lòng nghệ thuật
               </span>
             </div>
             <div class="menu-body">
@@ -853,7 +873,7 @@
               </div>
               <h3 class="menu-item-title">Phá lấu bò viên</h3>
               <p class="menu-item-desc">
-                Nước cốt dừa béo thơm hầm ngũ vị cùng bò viên dai giòn, dọn trên khay nhôm kiểu camping kèm bánh mì nướng than hồng và tắc ớt.
+                Nước cốt dừa béo thơm hầm ngũ vị cùng bò viên dai giòn, dọn trong <strong>Tô gốm sâu lòng nghệ thuật</strong> kèm bánh mì nướng than hồng và tắc ớt.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 60.000đ (60k)</span>
@@ -865,15 +885,16 @@
           <!-- 10. Mì ly dã ngoại -->
           <article class="menu-card" data-category="food" data-name="Mì ly dã ngoại" data-price="30k">
             <div class="menu-thumb-wrap">
+              <span class="menu-cup-badge badge-bowl">🍜 Tô Dã Ngoại Nghệ Thuật</span>
               <img
                 src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=600&q=80"
-                alt="Mì ly dã ngoại kèm ấm đun và khay nhôm camping"
+                alt="Mì ly dã ngoại trong tô giữ nhiệt camping nghệ thuật"
                 class="menu-thumb"
               />
               <span class="menu-price-tag">30k</span>
-              <span class="menu-prop-tag">
+              <span class="menu-prop-tag bowl-tag">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
-                Khay nhôm &amp; Ấm đun phượt
+                Tô giữ nhiệt camping nghệ thuật
               </span>
             </div>
             <div class="menu-body">
@@ -883,7 +904,7 @@
               </div>
               <h3 class="menu-item-title">Mì ly dã ngoại</h3>
               <p class="menu-item-desc">
-                Món ăn không thể thiếu của mọi chuyến cắm trại! Mì ly thêm trứng chần và xúc xích nướng, chế nước sôi trực tiếp từ ấm nhôm dã ngoại.
+                Món ăn dã ngoại huyền thoại thêm trứng chần và xúc xích nướng, chế nước sôi trực tiếp và bày trí bắt mắt trong <strong>Tô giữ nhiệt camping nghệ thuật</strong>.
               </p>
               <div class="menu-card-footer">
                 <span class="price-detail">Giá: 30.000đ (30k)</span>
