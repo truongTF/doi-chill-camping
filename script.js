@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'flex';
         } else if (filterValue === 'noel') {
           card.style.display = isNoel ? 'flex' : 'none';
+        } else if (filterValue === 'all-drinks') {
+          card.style.display = (category === 'coffee' || category === 'drink') ? 'flex' : 'none';
         } else if (category === filterValue) {
           card.style.display = 'flex';
         } else {
