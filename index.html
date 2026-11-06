@@ -13,11 +13,30 @@
 </head>
 <body>
 
+  <!-- Floating Snowfall Canvas (Toggleable & High-performance) -->
+  <canvas id="snowCanvas"></canvas>
+
+  <!-- ==================== NOEL FESTIVE ANNOUNCEMENT BAR ==================== -->
+  <aside class="noel-topbar" id="noelTopbar" role="region" aria-label="Thông báo mùa lễ hội Giáng Sinh 2026">
+    <div class="noel-topbar-content">
+      <span class="noel-pill-badge">🎄 MÙA NOEL 2026</span>
+      <span class="noel-topbar-text">Đón Giáng Sinh bên lửa trại Đồi Chill Thác Mơ: Thưởng thức <strong>Cacao Marshmallow khò lửa</strong>, <strong>Rượu Vang Nóng</strong> &amp; Check-in <strong>Cây Thông Khổng Lồ 4M</strong>!</span>
+      <a href="#thuc-don" class="noel-topbar-cta">Khám Phá Menu Noel ➔</a>
+    </div>
+    <button type="button" class="noel-topbar-close" id="noelTopbarClose" aria-label="Đóng thông báo">✕</button>
+  </aside>
+
   <!-- ==================== HEADER / NAVBAR ==================== -->
   <header class="site-header">
     <div class="container nav-bar">
       <a href="#hero" class="brand-logo" aria-label="Quán Cafe Đồi Chill">
         <div class="brand-icon">
+          <!-- Christmas Santa Hat Decor on Logo -->
+          <svg class="brand-santa-hat" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <path d="M7 26C8 14 21 8 28 5C26 12 28 18 29 26Z" fill="#D32F2F" />
+            <path d="M4 25C4 23.5 6 23.5 8 23.5H29C31 23.5 33 23.5 33 25C33 27 31 28 29 28H8C5.5 28 4 27 4 25Z" fill="#FFFFFF" />
+            <circle cx="28.5" cy="5.5" r="3.5" fill="#FFFFFF" stroke="#ECEFF1" stroke-width="0.5" />
+          </svg>
           <!-- Line-art Mountain + Tent + Sun SVG -->
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M8 3l4 8 5-5 5 15H2L8 3z"/>
@@ -25,7 +44,7 @@
           </svg>
         </div>
         <div class="brand-text">
-          <span class="brand-name">Đồi Chill Camping</span>
+          <span class="brand-name">Đồi Chill Camping 🎄</span>
           <span class="brand-sub">Thác Mơ • Phước Long • Bình Phước</span>
         </div>
       </a>
@@ -33,6 +52,7 @@
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="#hero">Trang Chủ</a></li>
+          <li><a href="#noel-le-hoi">Lễ Hội Noel</a></li>
           <li><a href="#khong-gian">Không Gian Đồi</a></li>
           <li><a href="#thuc-don">Thực Đơn Dã Ngoại</a></li>
           <li><a href="#dat-combo">Thuê Combo Lều</a></li>
@@ -41,6 +61,10 @@
       </nav>
 
       <div class="nav-cta">
+        <div class="noel-header-controls">
+          <button type="button" class="noel-toggle-btn toggle-snow-btn" title="Bật hoặc tắt hiệu ứng tuyết rơi">❄️ Tuyết Rơi: BẬT</button>
+          <button type="button" class="noel-toggle-btn toggle-music-btn" title="Bật hoặc tắt nhạc Giáng Sinh">🎵 Nhạc Noel</button>
+        </div>
         <div class="nav-status-pill" title="Giờ mở cửa quán: 5g-22g">
           <span class="status-dot"></span>
           <span>Mở cửa: 5g-22g</span>
@@ -61,6 +85,25 @@
         </button>
       </div>
     </div>
+
+    <!-- Multi-colored Fairy String Lights hanging along the navbar -->
+    <div class="noel-lights-bar" aria-hidden="true">
+      <span class="fairy-light red"></span>
+      <span class="fairy-light gold"></span>
+      <span class="fairy-light green"></span>
+      <span class="fairy-light blue"></span>
+      <span class="fairy-light warm"></span>
+      <span class="fairy-light red"></span>
+      <span class="fairy-light gold"></span>
+      <span class="fairy-light green"></span>
+      <span class="fairy-light blue"></span>
+      <span class="fairy-light warm"></span>
+      <span class="fairy-light red"></span>
+      <span class="fairy-light gold"></span>
+      <span class="fairy-light green"></span>
+      <span class="fairy-light blue"></span>
+      <span class="fairy-light warm"></span>
+    </div>
   </header>
 
   <main>
@@ -69,6 +112,13 @@
       <div class="container hero-grid">
         <!-- Left Column: Title, Slogan, CTA -->
         <div class="hero-content">
+          <div class="hero-noel-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>🎄 Mùa Giáng Sinh 2026 • Lửa Trại &amp; Đêm Sương Bên Đồi Gió</span>
+          </div>
+
           <div class="hero-coords">
             <!-- Line-art Compass / Mountain SVG -->
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -95,7 +145,7 @@
                 <path d="M15.5 21 12 15l-3.5 6"/>
                 <path d="M2 21h20"/>
               </svg>
-              Thuê Combo Dã Ngoại (6g-20g)
+              Thuê Combo Lều Noel (6g-20g)
             </a>
             <a href="#thuc-don" class="btn btn-outline">
               <!-- Mug Line-art Icon -->
@@ -106,7 +156,7 @@
                 <line x1="10" y1="2" x2="10" y2="4"/>
                 <line x1="14" y1="2" x2="14" y2="4"/>
               </svg>
-              Xem Menu 10 Món (30k-60k)
+              Xem Menu 15 Món (Có Món Noel)
             </a>
           </div>
 
@@ -155,7 +205,8 @@
 
         <!-- Right Column: Hero Camping Image & Placeholder Scene -->
         <div class="hero-showcase">
-          <div class="hero-visual-card">
+          <div class="hero-visual-card noel-corner-ribbon">
+            <div class="noel-ribbon-badge">🎅 Noel Camp</div>
             <div class="hero-visual-header">
               <span>KHU VỰC CHILL TRUNG TÂM • ĐỒI CHILL CAMP</span>
               <span>ELEVATION: 420M</span>
@@ -254,6 +305,100 @@
       </div>
     </section>
 
+    <!-- ==================== ĐẠI TIỆC GIÁNG SINH & NĂM MỚI ĐỒI CHILL ==================== -->
+    <section class="noel-festivities-section" id="noel-le-hoi" aria-label="Hoạt động đặc biệt mùa Giáng Sinh tại Đồi Chill">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" style="background: rgba(140, 29, 24, 0.4); border-color: #FF5252; color: #FFF;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>Mùa Lễ Hội Giáng Sinh 2026 • Đồi Gió &amp; Lửa Trại</span>
+          </div>
+          <h2 class="section-title">Trải Nghiệm <span>Giáng Sinh Bên Đồi Gió</span></h2>
+          <p class="section-desc">
+            Không khí se lạnh vùng núi Thác Mơ đã về! Hãy cùng người thương và bạn thân quây quần bên bếp than hồng, nghe tiếng thông reo và tận hưởng mùa Noel ấm cúng đậm chất phiêu lãng.
+          </p>
+          <div class="rugged-divider" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2l3 7h-6l3-7z"/><path d="M9 9l-4 8h14l-4-8"/><path d="M12 17v4"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="noel-festivities-grid">
+          <!-- Card 1: Cây thông khổng lồ -->
+          <article class="noel-feature-card">
+            <div class="noel-feature-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=700&q=80"
+                alt="Cây thông Noel thật khổng lồ 4M rực rỡ đèn fairy light giữa rừng thông Đồi Chill"
+                class="noel-feature-img"
+              />
+              <span class="noel-feature-badge">🌲 Check-in Sống Ảo</span>
+            </div>
+            <div class="noel-feature-body">
+              <h3 class="noel-feature-title">Cây Thông Khổng Lồ 4M</h3>
+              <p class="noel-feature-desc">
+                Cây thông rừng thật cao hơn 4m được trang hoàng hàng trăm ngọn đèn vàng ấm áp và nơ đỏ rustic. Tọa lạc ngay mỏm đá ngắm trọn biển mây và hoàng hôn hồ Thác Mơ.
+              </p>
+              <div class="noel-feature-tags">
+                <span class="noel-feature-tag-item">📸 Góc chụp triệu view</span>
+                <span class="noel-feature-tag-item">✨ Đèn fairy lights</span>
+                <span class="noel-feature-tag-item">🌄 Săn hoàng hôn</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Lửa trại & Acoustic Noel -->
+          <article class="noel-feature-card">
+            <div class="noel-feature-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=700&q=80"
+                alt="Bếp lửa trại bập bùng khò marshmallow và đêm nhạc acoustic mùa Noel"
+                class="noel-feature-img"
+              />
+              <span class="noel-feature-badge">🔥 Lửa Trại &amp; Acoustic</span>
+            </div>
+            <div class="noel-feature-body">
+              <h3 class="noel-feature-title">Lửa Trại &amp; Marshmallow</h3>
+              <p class="noel-feature-desc">
+                Quây quần bên đống củi thông đượm than hồng, tự tay xiên que khò kẹo dẻo xốp mịn béo ngọt và lắng nghe những giai điệu guitar mộc acoustic đêm sương lạnh.
+              </p>
+              <div class="noel-feature-tags">
+                <span class="noel-feature-tag-item">🎸 Guitar acoustic</span>
+                <span class="noel-feature-tag-item">🍢 Xiên nướng kẹo dẻo</span>
+                <span class="noel-feature-tag-item">🪵 Củi thông thơm ấm</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Ca Inox Cacao & Rượu Vang Nóng -->
+          <article class="noel-feature-card">
+            <div class="noel-feature-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=700&q=80"
+                alt="Ca inox dã ngoại cacao nóng marshmallow và rượu vang nóng Mulled Wine"
+                class="noel-feature-img"
+              />
+              <span class="noel-feature-badge">☕ Hương Vị Mùa Đông</span>
+            </div>
+            <div class="noel-feature-body">
+              <h3 class="noel-feature-title">Cacao &amp; Rượu Vang Nấu</h3>
+              <p class="noel-feature-desc">
+                Chiếc ca inox dã ngoại bốc khói ngun ngút với socola đắng ngọt hoặc ly vang ấm thơm hương quế nướng và lát cam vàng — sưởi ấm trọn vẹn từng tế bào giữa gió đông.
+              </p>
+              <div class="noel-feature-tags">
+                <span class="noel-feature-tag-item">🍫 Cacao marshmallow</span>
+                <span class="noel-feature-tag-item">🍷 Glühwein quế hồi</span>
+                <span class="noel-feature-tag-item">🍗 Gà nướng than</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== DANH SÁCH SẢN PHẨM / DỊCH VỤ (10 MÓN) ==================== -->
     <section class="menu-section" id="thuc-don">
       <div class="container">
@@ -280,9 +425,10 @@
         <!-- Filter & Props Legend -->
         <div class="menu-controls">
           <div class="filter-tabs" role="tablist" aria-label="Bộ lọc thực đơn">
-            <button type="button" class="filter-btn active" data-filter="all">Tất Cả (10 Món)</button>
-            <button type="button" class="filter-btn" data-filter="drink">Đồ Uống Ca Inox (7)</button>
-            <button type="button" class="filter-btn" data-filter="food">Món Nóng Khay Nhôm (3)</button>
+            <button type="button" class="filter-btn active" data-filter="all">Tất Cả (15 Món)</button>
+            <button type="button" class="filter-btn" data-filter="noel">🎄 Noel Special (5 Món)</button>
+            <button type="button" class="filter-btn" data-filter="drink">Đồ Uống Ca Inox (10)</button>
+            <button type="button" class="filter-btn" data-filter="food">Món Nóng Khay Nhôm (5)</button>
           </div>
           <div class="props-legend">
             <span class="prop-badge-info">
@@ -294,8 +440,158 @@
           </div>
         </div>
 
-        <!-- 10 Popular Products Grid -->
+        <!-- 15 Popular Products Grid (Including Christmas Special Items) -->
         <div class="menu-grid" id="menuGrid">
+          <!-- NOEL SPECIAL 1: Cacao Nóng Noel Marshmallow -->
+          <article class="menu-card" data-category="drink" data-noel="true" data-name="Cacao Nóng Noel Marshmallow" data-price="45k">
+            <div class="menu-thumb-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80"
+                alt="Cacao Nóng Noel Marshmallow ca inox khò lửa bốc khói"
+                class="menu-thumb"
+              />
+              <span class="menu-price-tag">45k</span>
+              <span class="menu-prop-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+                Ca inox giữ nhiệt &amp; Kẹo khò lửa
+              </span>
+            </div>
+            <div class="menu-body">
+              <div class="menu-meta">
+                <span>#NOEL-01 • Best Seller Mùa Đông</span>
+                <span>45.000đ</span>
+              </div>
+              <h3 class="menu-item-title">Cacao Nóng Noel Marshmallow</h3>
+              <p class="menu-item-desc">
+                Cacao nguyên chất nóng bốc khói trong ca inox, phủ kẹo dẻo marshmallow khò vàng mặt béo ngậy và rắc bột quế tuyết thơm lừng.
+              </p>
+              <div class="menu-card-footer">
+                <span class="price-detail">Giá: 45.000đ (45k)</span>
+                <button type="button" class="btn-select-item" data-item="Cacao Nóng Noel Marshmallow (45k)">+ Chọn món</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- NOEL SPECIAL 2: Rượu Vang Nấu Đồi Gió -->
+          <article class="menu-card" data-category="drink" data-noel="true" data-name="Rượu Vang Nấu Đồi Gió" data-price="65k">
+            <div class="menu-thumb-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80"
+                alt="Rượu Vang Nấu Đồi Gió quế hồi cam vàng phong cách cắm trại"
+                class="menu-thumb"
+              />
+              <span class="menu-price-tag">65k</span>
+              <span class="menu-prop-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+                Ca inox &amp; Gia vị thảo mộc
+              </span>
+            </div>
+            <div class="menu-body">
+              <div class="menu-meta">
+                <span>#NOEL-02 • Hương Vị Lễ Hội</span>
+                <span>65.000đ</span>
+              </div>
+              <h3 class="menu-item-title">Rượu Vang Nấu Đồi Gió</h3>
+              <p class="menu-item-desc">
+                Vang ấm Glühwein nấu cùng vỏ cam vàng, thanh quế, hoa hồi và mật ong hoa rừng theo phong cách cắm trại châu Âu, xua tan cái lạnh đêm đồi.
+              </p>
+              <div class="menu-card-footer">
+                <span class="price-detail">Giá: 65.000đ (65k)</span>
+                <button type="button" class="btn-select-item" data-item="Rượu Vang Nấu Đồi Gió (65k)">+ Chọn món</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- NOEL SPECIAL 3: Trà Táo Quế Mật Ong Rừng -->
+          <article class="menu-card" data-category="drink" data-noel="true" data-name="Trà Táo Quế Mật Ong Rừng" data-price="45k">
+            <div class="menu-thumb-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+                alt="Trà Táo Quế Mật Ong Rừng bốc khói ca inox"
+                class="menu-thumb"
+              />
+              <span class="menu-price-tag">45k</span>
+              <span class="menu-prop-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+                Ca inox quân đội &amp; Thanh quế
+              </span>
+            </div>
+            <div class="menu-body">
+              <div class="menu-meta">
+                <span>#NOEL-03 • Ấm Lòng Đêm Sương</span>
+                <span>45.000đ</span>
+              </div>
+              <h3 class="menu-item-title">Trà Táo Quế Mật Ong Rừng</h3>
+              <p class="menu-item-desc">
+                Trà đen ủ cùng lát táo đỏ tươi, thanh quế nướng thơm nồng và mật ong rừng nguyên chất, phục vụ trong ca inox quân đội giữ nhiệt ấm áp.
+              </p>
+              <div class="menu-card-footer">
+                <span class="price-detail">Giá: 45.000đ (45k)</span>
+                <button type="button" class="btn-select-item" data-item="Trà Táo Quế Mật Ong Rừng (45k)">+ Chọn món</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- NOEL SPECIAL 4: Gà Nướng Tiêu Rừng Giáng Sinh -->
+          <article class="menu-card" data-category="food" data-noel="true" data-name="Gà Nướng Tiêu Rừng Giáng Sinh" data-price="180k">
+            <div class="menu-thumb-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"
+                alt="Gà Nướng Tiêu Rừng Giáng Sinh trên khay nhôm than hồng"
+                class="menu-thumb"
+              />
+              <span class="menu-price-tag">180k</span>
+              <span class="menu-prop-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
+                Khay nhôm dã ngoại &amp; Muối ớt rừng
+              </span>
+            </div>
+            <div class="menu-body">
+              <div class="menu-meta">
+                <span>#NOEL-04 • Đại Tiệc Lửa Trại</span>
+                <span>180.000đ</span>
+              </div>
+              <h3 class="menu-item-title">Gà Nướng Tiêu Rừng Noel</h3>
+              <p class="menu-item-desc">
+                Nửa con gà ta thả đồi ướp hạt dổi, mắc khén và tiêu rừng Phước Long nướng than hồng da giòn rụm, bưng trên khay nhôm camping thơm nức mũi.
+              </p>
+              <div class="menu-card-footer">
+                <span class="price-detail">Giá: 180.000đ (180k)</span>
+                <button type="button" class="btn-select-item" data-item="Gà Nướng Tiêu Rừng Giáng Sinh (180k)">+ Chọn món</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- NOEL SPECIAL 5: Bắp & Khoai Nướng Bơ Giáng Sinh -->
+          <article class="menu-card" data-category="food" data-noel="true" data-name="Bắp & Khoai Nướng Bơ Giáng Sinh" data-price="40k">
+            <div class="menu-thumb-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+                alt="Bắp và khoai lang mật nướng bơ than củi mùa đông"
+                class="menu-thumb"
+              />
+              <span class="menu-price-tag">40k</span>
+              <span class="menu-prop-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h12"/></svg>
+                Khay nhôm &amp; Than củi đồi
+              </span>
+            </div>
+            <div class="menu-body">
+              <div class="menu-meta">
+                <span>#NOEL-05 • Món Nướng Than Củi</span>
+                <span>40.000đ</span>
+              </div>
+              <h3 class="menu-item-title">Bắp &amp; Khoai Nướng Bơ Noel</h3>
+              <p class="menu-item-desc">
+                Bắp ngọt nướng mỡ hành bơ thơm lừng cùng củ khoai mật nướng vùi tro than củi dẻo quánh ngọt lịm, dọn trên khay nhôm kiểu camping.
+              </p>
+              <div class="menu-card-footer">
+                <span class="price-detail">Giá: 40.000đ (40k)</span>
+                <button type="button" class="btn-select-item" data-item="Bắp & Khoai Nướng Bơ Giáng Sinh (40k)">+ Chọn món</button>
+              </div>
+            </div>
+          </article>
+
           <!-- 1. Cà phê ngọt ngào -->
           <article class="menu-card" data-category="drink" data-name="Cà phê ngọt ngào" data-price="35k">
             <div class="menu-thumb-wrap">
@@ -625,6 +921,17 @@
             </p>
 
             <div class="package-cards-list" id="packageCardsList">
+              <div class="package-option-card" data-package="Gói Lều Giáng Sinh Cozy">
+                <div class="package-option-header">
+                  <span class="package-option-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h-6l3-7z"/><path d="M9 9l-4 8h14l-4-8"/><path d="M12 17v4"/></svg>
+                    🎄 Gói Lều Giáng Sinh Cozy
+                  </span>
+                  <span class="package-tag" style="background: #8C1D18; color: #FFF;">Hot Noel 2026</span>
+                </div>
+                <p>Lều canvas decor dải đèn fairy light lung linh, cây thông mini để bàn, củi thông sưởi ấm và tặng kèm 2 ca Cacao nóng nướng marshmallow!</p>
+              </div>
+
               <div class="package-option-card active" data-package="Trọn gói lều">
                 <div class="package-option-header">
                   <span class="package-option-title">
@@ -735,6 +1042,7 @@
                 </label>
                 <select id="servicePackage" name="servicePackage" class="form-control" required>
                   <option value="Trọn gói lều" selected>Trọn gói lều (Lều canvas + Ghế xếp + Bếp lửa trại)</option>
+                  <option value="Gói Lều Giáng Sinh Cozy">🎄 Gói Lều Giáng Sinh Cozy (+220k: Đèn fairy lights + Cây thông mini + 2 Cacao Marshmallow)</option>
                   <option value="Chỉ thuê bếp nướng">Chỉ thuê bếp nướng (Bếp than hồng + Khay nhôm camping)</option>
                   <option value="Bàn cafe thường">Bàn cafe thường (Ghế xếp săn mây + Bàn dã ngoại)</option>
                 </select>
@@ -948,6 +1256,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Noel Quick Controls Widget (Snowfall toggle & Cozy Holiday Melody) -->
+  <div class="floating-noel-widget" aria-label="Điều khiển hiệu ứng Giáng Sinh">
+    <button type="button" class="floating-snow-pill toggle-snow-btn" title="Bật / Tắt tuyết rơi">
+      <span class="pulse-dot"></span>
+      <span>❄️ Tuyết Rơi: BẬT</span>
+    </button>
+    <button type="button" class="floating-snow-pill toggle-music-btn" title="Bật / Tắt giai điệu Giáng Sinh">
+      <span>🎵 Nhạc Noel</span>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
