@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterValue = btn.getAttribute('data-filter');
       menuCards.forEach((card) => {
         const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
+        const isNoel = card.getAttribute('data-noel') === 'true';
+        if (filterValue === 'all') {
+          card.style.display = 'flex';
+        } else if (filterValue === 'noel') {
+          card.style.display = isNoel ? 'flex' : 'none';
+        } else if (category === filterValue) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -43,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Automatic Cart & Combo Total Calculator
   const PACKAGE_FEES = {
     'Trọn gói lều': 150000,
+    'Gói Lều Giáng Sinh Cozy': 220000,
     'Chỉ thuê bếp nướng': 80000,
     'Bàn cafe thường': 0
   };
@@ -285,4 +291,199 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================================================
+  // 6. NOEL SPECIAL: CANVAS SNOWFALL SYSTEM (TOGGLEABLE & PERSISTENT)
+  // ==========================================================================
+  const canvas = document.getElementById('snowCanvas');
+  let snowActive = localStorage.getItem('doiChillSnow') !== 'off';
+  let animationId = null;
+  const toggleSnowBtns = document.querySelectorAll('.toggle-snow-btn');
+
+  function updateSnowButtons() {
+    toggleSnowBtns.forEach((b) => {
+      if (snowActive) {
+        b.classList.add('active');
+        b.innerHTML = '❄️ Tuyết Rơi: BẬT';
+      } else {
+        b.classList.remove('active');
+        b.innerHTML = '❄️ Tuyết Rơi: TẮT';
+      }
+    });
+  }
+
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const flakeCount = Math.min(85, Math.floor(window.innerWidth / 15));
+    const flakes = [];
+
+    for (let i = 0; i < flakeCount; i++) {
+      flakes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 2.8 + 1,
+        d: Math.random() * flakeCount,
+        vx: Math.random() * 0.8 - 0.4,
+        vy: Math.random() * 1.2 + 0.6,
+        alpha: Math.random() * 0.6 + 0.3
+      });
+    }
+
+    function drawSnow() {
+      if (!snowActive) {
+        ctx.clearRect(0, 0, width, height);
+        animationId = null;
+        return;
+      }
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < flakes.length; i++) {
+        const f = flakes[i];
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, false);
+        ctx.fillStyle = `rgba(240, 248, 255, ${f.alpha})`;
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+        ctx.fill();
+        ctx.restore();
+
+        f.y += f.vy;
+        f.x += f.vx + Math.sin(f.d) * 0.5;
+        f.d += 0.015;
+
+        if (f.y > height) {
+          f.y = -5;
+          f.x = Math.random() * width;
+        }
+        if (f.x > width) f.x = 0;
+        if (f.x < 0) f.x = width;
+      }
+      animationId = requestAnimationFrame(drawSnow);
+    }
+
+    if (snowActive) {
+      drawSnow();
+    }
+    updateSnowButtons();
+
+    toggleSnowBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        snowActive = !snowActive;
+        localStorage.setItem('doiChillSnow', snowActive ? 'on' : 'off');
+        updateSnowButtons();
+        if (snowActive) {
+          if (!animationId) drawSnow();
+        } else {
+          ctx.clearRect(0, 0, width, height);
+        }
+      });
+    });
+  }
+
+  // ==========================================================================
+  // 7. NOEL TOPBAR CLOSE LISTENER
+  // ==========================================================================
+  const noelTopbar = document.getElementById('noelTopbar');
+  const noelTopbarClose = document.getElementById('noelTopbarClose');
+  if (noelTopbarClose && noelTopbar) {
+    noelTopbarClose.addEventListener('click', () => {
+      noelTopbar.classList.add('closed');
+      sessionStorage.setItem('doiChillNoelBannerClosed', 'true');
+    });
+    if (sessionStorage.getItem('doiChillNoelBannerClosed') === 'true') {
+      noelTopbar.classList.add('closed');
+    }
+  }
+
+  // ==========================================================================
+  // 8. NOEL CAMPFIRE & CHILL ACOUSTIC MELODY (WEB AUDIO API)
+  // ==========================================================================
+  const toggleMusicBtns = document.querySelectorAll('.toggle-music-btn');
+  let audioCtx = null;
+  let isPlayingMusic = false;
+  let musicTimer = null;
+
+  // Gentle pentatonic holiday chime frequencies
+  const melodyNotes = [
+    659.25, 659.25, 659.25, // E5 E5 E5
+    659.25, 659.25, 659.25, // E5 E5 E5
+    659.25, 783.99, 523.25, 587.33, 659.25, // E5 G5 C5 D5 E5
+    698.46, 698.46, 698.46, 698.46, 698.46, 659.25, 659.25 // F5 F5 F5 F5 F5 E5 E5
+  ];
+
+  function playChime(freq, start, duration) {
+    if (!audioCtx) return;
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, start);
+
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(0.06, start + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(start);
+      osc.stop(start + duration);
+    } catch (_) {}
+  }
+
+  function startMelody() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    isPlayingMusic = true;
+    updateMusicButtons();
+
+    let noteIndex = 0;
+    function playStep() {
+      if (!isPlayingMusic) return;
+      const now = audioCtx.currentTime;
+      playChime(melodyNotes[noteIndex % melodyNotes.length], now, 0.42);
+      noteIndex++;
+      musicTimer = setTimeout(playStep, 400);
+    }
+    playStep();
+  }
+
+  function stopMelody() {
+    isPlayingMusic = false;
+    if (musicTimer) clearTimeout(musicTimer);
+    updateMusicButtons();
+  }
+
+  function updateMusicButtons() {
+    toggleMusicBtns.forEach((b) => {
+      if (isPlayingMusic) {
+        b.classList.add('active');
+        b.innerHTML = '🎵 Nhạc Noel: BẬT';
+      } else {
+        b.classList.remove('active');
+        b.innerHTML = '🎵 Nhạc Noel: TẮT';
+      }
+    });
+  }
+
+  toggleMusicBtns.forEach((b) => {
+    b.addEventListener('click', () => {
+      if (isPlayingMusic) {
+        stopMelody();
+      } else {
+        startMelody();
+      }
+    });
+  });
 });
