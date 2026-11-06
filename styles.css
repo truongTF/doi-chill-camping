@@ -71,17 +71,10 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  /* Subtle topographic & matte grain background */
-  background-image: 
-    radial-gradient(circle at 15% 20%, rgba(62, 84, 56, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(216, 166, 87, 0.10) 0%, transparent 50%),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 0.012) 0px,
-      rgba(255, 255, 255, 0.012) 1px,
-      transparent 1px,
-      transparent 8px
-    );
+  /* Authentic Đồi Chill background with dark atmospheric vignette overlay */
+  background: 
+    linear-gradient(180deg, rgba(18, 21, 18, 0.88) 0%, rgba(20, 26, 20, 0.93) 40%, rgba(18, 21, 18, 0.96) 100%),
+    url('background-doi-chill.jpg') center top / cover no-repeat fixed;
 }
 
 img,
@@ -374,8 +367,8 @@ textarea {
   overflow: hidden;
   border-bottom: 2px solid var(--border-subtle);
   background:
-    linear-gradient(180deg, rgba(18, 21, 18, 0.75) 0%, rgba(26, 35, 24, 0.88) 60%, var(--bg-matte-black) 100%),
-    url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    linear-gradient(180deg, rgba(18, 21, 18, 0.72) 0%, rgba(26, 35, 24, 0.85) 60%, var(--bg-matte-black) 100%),
+    url('background-doi-chill.jpg') center 35% / cover no-repeat;
 }
 
 .hero-grid {
