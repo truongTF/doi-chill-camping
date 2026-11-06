@@ -1453,3 +1453,527 @@ textarea {
     text-align: right;
   }
 }
+
+
+/* ==========================================================================
+   CHRISTMAS & NOEL FESTIVE STYLING (GIÁNG SINH ĐỒI CHILL 2026)
+   ========================================================================== */
+
+/* Top Noel Announcement Bar */
+.noel-topbar {
+  background: linear-gradient(90deg, #8C1D18 0%, #1A472A 50%, #8C1D18 100%);
+  color: #FFF9E6;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgba(255, 215, 0, 0.4);
+  position: relative;
+  z-index: 1005;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.noel-topbar.closed {
+  display: none;
+}
+
+.noel-topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.noel-pill-badge {
+  background: #D8A657;
+  color: #121512;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.noel-topbar-text {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.noel-topbar-cta {
+  color: #FFD700;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.noel-topbar-cta:hover {
+  color: #FFF;
+}
+
+.noel-topbar-close {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFF;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.noel-topbar-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+/* Garland String Lights hanging beneath Header */
+.noel-lights-bar {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1002;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.fairy-light {
+  width: 10px;
+  height: 14px;
+  border-radius: 50% 50% 60% 60%;
+  display: inline-block;
+  position: relative;
+  animation: fairyGlow 1.6s infinite alternate ease-in-out;
+}
+
+.fairy-light::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  width: 4px;
+  height: 3px;
+  background: #2B3A27;
+  border-radius: 1px;
+}
+
+.fairy-light.red {
+  background: #FF3344;
+  box-shadow: 0 0 8px #FF3344, 0 0 16px rgba(255, 51, 68, 0.7);
+  animation-delay: 0s;
+}
+
+.fairy-light.gold {
+  background: #FFD700;
+  box-shadow: 0 0 8px #FFD700, 0 0 16px rgba(255, 215, 0, 0.7);
+  animation-delay: 0.35s;
+}
+
+.fairy-light.green {
+  background: #39D353;
+  box-shadow: 0 0 8px #39D353, 0 0 16px rgba(57, 211, 83, 0.7);
+  animation-delay: 0.7s;
+}
+
+.fairy-light.blue {
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8, 0 0 16px rgba(56, 189, 248, 0.7);
+  animation-delay: 1.05s;
+}
+
+.fairy-light.warm {
+  background: #FF9800;
+  box-shadow: 0 0 8px #FF9800, 0 0 16px rgba(255, 152, 0, 0.7);
+  animation-delay: 1.4s;
+}
+
+@keyframes fairyGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.85);
+    filter: brightness(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: brightness(1.3);
+  }
+}
+
+/* Santa Hat decoration on Brand Icon */
+.brand-icon {
+  position: relative;
+  overflow: visible !important;
+}
+
+.brand-santa-hat {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  transform-origin: bottom left;
+  animation: santaHatWiggle 4s infinite ease-in-out;
+}
+
+@keyframes santaHatWiggle {
+  0%, 100% { transform: rotate(14deg); }
+  50% { transform: rotate(4deg) translateY(-2px); }
+}
+
+/* Snowfall Canvas */
+#snowCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Noel Quick Controls in Header & Floating Pill */
+.noel-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.noel-toggle-btn {
+  background: rgba(43, 58, 39, 0.85);
+  border: 1px solid var(--sand-primary);
+  color: var(--sand-light);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+.noel-toggle-btn:hover {
+  background: var(--sand-primary);
+  color: #121512;
+  box-shadow: 0 2px 12px rgba(216, 166, 87, 0.45);
+  transform: translateY(-1px);
+}
+
+.noel-toggle-btn.active {
+  background: var(--sand-primary);
+  color: #121512;
+  font-weight: 700;
+}
+
+/* Floating Noel Theme Pill (Bottom Left) */
+.floating-noel-widget {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floating-snow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(22, 28, 22, 0.94);
+  border: 1.5px solid var(--sand-primary);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+  color: var(--sand-light);
+  font-size: 0.84rem;
+  font-family: var(--font-display);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.floating-snow-pill:hover {
+  border-color: #FFF;
+  color: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(216, 166, 87, 0.35);
+}
+
+.floating-snow-pill .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #38BDF8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: snowDotPulse 1.5s infinite;
+}
+
+@keyframes snowDotPulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Hero Section Noel Badges & Season Ribbon */
+.hero-noel-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.95rem;
+  background: linear-gradient(135deg, rgba(140, 29, 24, 0.6) 0%, rgba(26, 71, 42, 0.6) 100%);
+  border: 1.5px solid #FFD700;
+  color: #FFF9E6;
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.9rem;
+  box-shadow: 0 4px 16px rgba(140, 29, 24, 0.35);
+  animation: noelTagGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes noelTagGlow {
+  0% { box-shadow: 0 4px 16px rgba(140, 29, 24, 0.35); }
+  100% { box-shadow: 0 4px 22px rgba(255, 215, 0, 0.45); }
+}
+
+.hero-visual-card.noel-corner-ribbon {
+  position: relative;
+  overflow: hidden;
+}
+
+.noel-ribbon-badge {
+  position: absolute;
+  top: 18px;
+  right: -36px;
+  background: #8C1D18;
+  color: #FFF;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 2.5rem;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  border: 1px dashed rgba(255, 215, 0, 0.5);
+}
+
+/* ==========================================================================
+   CHRISTMAS FESTIVITIES SECTION (HOẠT ĐỘNG GIÁNG SINH ĐỒI CHILL)
+   ========================================================================== */
+.noel-festivities-section {
+  padding: 5rem 0;
+  position: relative;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(140, 29, 24, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(26, 71, 42, 0.22) 0%, transparent 45%),
+    var(--bg-charcoal);
+  border-top: 1px solid rgba(216, 166, 87, 0.15);
+  border-bottom: 1px solid rgba(216, 166, 87, 0.15);
+  overflow: hidden;
+}
+
+.noel-festivities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.noel-feature-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.noel-feature-card:hover {
+  transform: translateY(-6px);
+  border-color: #D8A657;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(216, 166, 87, 0.2);
+}
+
+.noel-feature-img-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.noel-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.noel-feature-card:hover .noel-feature-img {
+  transform: scale(1.08);
+}
+
+.noel-feature-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(18, 21, 18, 0.85);
+  border: 1px solid #D8A657;
+  color: #FFF9E6;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  backdrop-filter: blur(6px);
+}
+
+.noel-feature-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.noel-feature-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.noel-feature-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.noel-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.noel-feature-tag-item {
+  background: rgba(62, 84, 56, 0.4);
+  border: 1px solid rgba(216, 166, 87, 0.25);
+  color: var(--sand-light);
+  font-size: 0.76rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Noel Special Menu Card Highlights */
+.menu-card[data-noel="true"] {
+  border-color: rgba(216, 166, 87, 0.45);
+  background: linear-gradient(180deg, rgba(39, 50, 36, 0.9) 0%, rgba(33, 40, 32, 0.95) 100%);
+  position: relative;
+}
+
+.menu-card[data-noel="true"]::before {
+  content: "🎄 NOEL SPECIAL";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #8C1D18;
+  color: #FFF;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(140, 29, 24, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.filter-btn[data-filter="noel"] {
+  background: rgba(140, 29, 24, 0.3);
+  border-color: #8C1D18;
+  color: #FFAAA6;
+}
+
+.filter-btn[data-filter="noel"]:hover,
+.filter-btn[data-filter="noel"].active {
+  background: #8C1D18;
+  border-color: #FF5252;
+  color: #FFF;
+  box-shadow: 0 4px 14px rgba(140, 29, 24, 0.5);
+}
+
+/* Responsive adjustments for Noel elements */
+@media (max-width: 992px) {
+  .noel-festivities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .noel-topbar {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  .noel-topbar-content {
+    gap: 0.4rem;
+  }
+  .noel-festivities-grid {
+    grid-template-columns: 1fr;
+  }
+  .floating-noel-widget {
+    left: 1rem;
+    bottom: 5.5rem;
+  }
+  .noel-header-controls {
+    display: none; /* Keep header clean on mobile, accessible via floating widget */
+  }
+}
